@@ -1,0 +1,28 @@
+[package]
+name = "ekm"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "key_gen"
+path = "src/bin/key_gen.rs"
+
+[[bin]]
+name = "key_load"
+path = "src/bin/key_load.rs"
+
+[dependencies]
+ethers = { version = "^2.0"}
+secrets = "1.2.0"
+aes = "0.7.4"
+block-modes = { version = "0.8.1", features = ["std"] }
+rpassword = "7.3.1"
+regex = "1"
+rand = "0.8.4"
+hex = "0.4"
+anyhow = "1.0"
+hmac = "0.12"
+sha2 = "0.10"
+pbkdf2 = "0.12"
+rsa = { version = "0.9.6", features = ["sha2"] }
+clap = "3.1.6"
